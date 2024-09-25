@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+     <header>   
+<h1 class="text-6xl text-center">phone hunting</h1>
+    </header>
+     <main>
+        <!-- searchbar -->
+     <div class="lg:p-16 p-8 flex lg:gap-16 gap-10">
+        <label  class="w-10/12 input input-bordered flex items-center gap-2">
+            <input id="search-text" type="text" class="grow" placeholder="Search..." />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="h-4 w-4 opacity-70">
+              <path
+                fill-rule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd" />
+            </svg>
+          </label>
+          <button onclick="handleSearch()" class="btn btn-accent">search</button>
+     </div>
+
+
+       <!-- loading spinner -->
+   <div id="spinner" class="text-center flex items-center justify-center h-screen hidden">
+    <span class="loading loading-spinner loading-lg"></span>
+   </div>
+     <!-- card -->
+  <div id="phone-card" class="grid lg:grid-cols-3 md:grid-cols-2 lg:grid-cols-1 gap-4 lg:p-16 p-6 bg-slate-100">
+    <!-- <div class="card bg-base-100 w-96 shadow-xl">
+      <figure>
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+          alt="Shoes" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Shoes!</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div> -->
+
+ </div> 
+ <div>
+  <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 id="phone-name" class="text-center text-3xl font-bold">Hello!</h3>
+    <p id="phone-details" class="flex items-center flex-col py-4 text-center">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+ </div>
+
+
+
+
+    </main>
+     <footer>
+
+    </footer>
+    <script src="./js/practice.js"></script>
+</body>
+</html>
